@@ -1,3 +1,6 @@
+# bagan request client ke web aplikasi berbasis Django beserta responnya 
+
+
 # Template Proyek Django PBP
 
 Pemrograman Berbasis Platform (CSGE602022) - diselenggarakan oleh Fakultas Ilmu Komputer Universitas Indonesia, Semester Ganjil 2022/2023
@@ -16,7 +19,7 @@ Apabila kamu ingin menggunakan repositori ini sebagai repositori awalan yang nan
    untuk membuat salinan repositori ke dalam akun GitHub milikmu.
 2. Buka laman GitHub repositori yang dibuat dari templat, lalu gunakan perintah
    `git clone` untuk menyalin repositorinya ke suatu lokasi di dalam sistem
-   berkas (_filesystem_) komputermu:
+   berkas (_filesystem_ ) komputermu:
 
    ```shell
    git clone <URL ke repositori di GitHub> <path ke suatu lokasi di filesystem>
