@@ -18,7 +18,7 @@
 
 2. Untuk melakukan routing terhadap fungsi views.py kita harus memasukkan sebuah path pada folder katalog file urls.py dengan perintah path() jangan lupa juga untuk menambahkan path kedalam folder project django juga.
 
-3. Setelah dilakukan perintah loaddata jason yang akan memasukkan data didalamnya ke dalam database django lokal, akan dibuat sebuah fungsi untuk mengambil data tersebut menggunakan perintah CatalogItem.objects.all() kemudian akan melakukan render dengan perintah render(_____)
+3. Setelah dilakukan perintah loaddata jason yang akan memasukkan data didalamnya ke dalam database django lokal, akan dibuat sebuah variabel context yang akan menyimpan data tersebut. kemudian akan melakukan render dengan perintah render(_____, context)
 
 4. Dengan membuat file Procfile untuk mengatur deployment di Heroku. Dan selanjutnya adalah membuat _new app_ di Heroku dan import repo tugas 2 ini dari GitHub ke Heroku untuk di-deploy. jangan lupa menambahkan api values dan api name pada settingan repository github tugas 2. 
 
