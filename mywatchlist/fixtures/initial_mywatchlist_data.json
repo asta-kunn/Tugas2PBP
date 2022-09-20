@@ -81,10 +81,10 @@
         "pk": 8,
         "fields": {
             "watched": "Sudah",
-            "title": "Spirited Away",
+            "title": "Tampar",
             "rating": 4,
             "release_date": "2001-07-20",
-            "review": "wibu tapi ga wibbu banget" 
+            "review": "nyesek bangett, bagus sangat di rekomendasikan" 
        }
     },
     {
@@ -92,7 +92,7 @@
         "pk": 9,
         "fields": {
             "watched": "Belum",
-            "title": "The Godfather",
+            "title": "Spongebob Squarepants",
             "rating": 3,
             "release_date": "1972-03-24",
             "review": "Film ini sangat bagus"
@@ -103,10 +103,10 @@
         "pk": 10,
         "fields": {
             "watched": "Belum",
-            "title": "The Shawshank Redemption",
+            "title": "Tendangan si Madun the Movie",
             "rating": 4,
             "release_date": "1994-09-23",
-            "review": "Film ini sangat bagus"
+            "review": "Film ini sangat bagus dan nostalgic banget"
        }
     }
 ]
