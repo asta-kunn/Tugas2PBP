@@ -98,7 +98,10 @@ Dalam sebuah platform, pasti terjadi pertukaran data antara user dengan data yan
 ## Screenshot POSTMAN
 1. /mywatchlist/html
 ![alt text](./assets/html.jpg "html")
+![alt text](./assets/html-heroku.jpg "html-heroku")
 2. /mywatchlist/json
 ![alt text](./assets/json.jpg "json")
+![alt text](./assets/json-heroku.jpg "json-heroku")
 3. /mywatchlist/xml
 ![alt text](./assets/xml.jpg "xml")
+![alt text](./assets/xml-heroku.jpg "xml-heroku")
