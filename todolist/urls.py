@@ -6,7 +6,7 @@ urlpatterns = [
     path('create-task/', tambah_input, name="create-task"),
     path('hapus/<int:pk>', hapus_input, name="hapus"),
     path('cheklist/<int:pk>', cheklist_todolist, name="cheklist"),
-    path('registrasi/', registrasi, name="registrasi"),
+    path('register/', registrasi, name="register"),
     path('login/', login_user, name="login"),
     path('logout/', logout_user, name="logout"),
 ] 

@@ -55,7 +55,7 @@ def registrasi(request):
             messages.success(request, "Registration successful")
             return redirect("todolist:login")
     context = {"form":form}
-    return render(request, "registration.html", context)
+    return render(request, "register.html", context)
 
 def login_user(request):
     if request.method == "POST":

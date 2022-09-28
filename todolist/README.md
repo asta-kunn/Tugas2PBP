@@ -1,5 +1,8 @@
 # Live Demo Link 🚀
-[TODOLIST page 💻]
+[TODOLIST page 💻](https://tugas-2-pbp-rifqi.herokuapp.com/todolist/)
+[Register Page 📝](https://tugas-2-pbp-rifqi.herokuapp.com/todolist/register)
+[Login Page 📃](https://tugas-2-pbp-rifqi.herokuapp.com/todolist/login)
+[Create New Task Page 📃](https://tugas-2-pbp-rifqi.herokuapp.com/todolist/create-task)
 
 
 ## Apa kegunaan {% csrf_token %} pada elemen <form>? Apa yang terjadi apabila tidak ada potongan kode tersebut pada elemen <form>?
