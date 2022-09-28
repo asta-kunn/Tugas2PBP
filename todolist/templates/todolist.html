@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% csrf_token %}
+
+<h5 style= "text-align: center">Nama: </h5>
+<p style= "text-align: center">{{nama}}</p>
+
+<table style="margin-left: auto; margin-right: auto;">
+    <tr>
+    <th>Tittle</th>
+    <th>Tanggal</th>
+    <th>Deskripsi</th>
+    <th>Selesai</th>
+    <th>Cheklist</th>
+    <th>Hapus</th>
+    </tr>
+    {% comment %} Tambahkan data di bawah baris ini {% endcomment %}
+    {% for todolist in todo_list %}
+    <tr>
+        <th>{{todolist.title}}</th>
+        <th>{{todolist.date}}</th>
+        <th>{{todolist.description}}</th>
+        {% if todolist.status == False %}
+        <th>Belum Selesai</th>
+        {% else %}
+        <th>Selesai</th>
+        {% endif %}
+        <th><a href="{% url 'todolist:cheklist' todolist.id %}"><button>Check</button></th>
+        <th><a href="{% url 'todolist:hapus' todolist.pk%}"><button>Delete</button></th>
+        
+    </tr>
+{% endfor %}
+
+   
+</table>
+    
+
+<h5  style= "text-align: center">Sesi terakhir login: {{ last_login }}</h5>
+<button style= "display: block; margin-left: auto; margin-right: auto;"><a href="{% url 'todolist:create-task' %}">Tambah Task Baru</a></button>
+<button style= "display: block; margin-left: auto; margin-right: auto;"><a href="{% url 'todolist:logout' %}">Logout</a></button>
+
+
+
+
+
+{% endblock content %}
