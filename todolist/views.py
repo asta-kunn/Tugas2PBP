@@ -53,7 +53,7 @@ def registrasi(request):
         if form.is_valid():
             form.save()
             messages.success(request, "Registration successful")
-            return redirect("todolist:login_user")
+            return redirect("todolist:login")
     context = {"form":form}
     return render(request, "registration.html", context)
 

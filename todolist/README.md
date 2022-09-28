@@ -54,4 +54,11 @@
     kita juga harus menambahkan button submit buat yang akan diikirim ke fungsi tambah_input di views.py untuk ditambahkan kke database
 
     7. sama seperti point 2 tadi, kita akan menambahkan routing path /todolist/login,register,create-task,logout
-    
+
+## Akun dummy
+    Akun 1 :
+    ussername = icuncantik
+    password = pbp@2022
+    akun 2 :
+    ussername : icunburik
+    password = pbp@2022
