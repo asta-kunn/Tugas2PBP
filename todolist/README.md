@@ -65,3 +65,63 @@
     akun 2 :
     ussername : icunburik
     password = pbp@2022
+
+
+## README TUGAS 5
+## Apa perbedaan dari Inline, Internal, dan External CSS? Apa saja kelebihan dan kekurangan dari masing-masing style?
+    Internal : Internal CSS adalah kode CSS yang ditulis di dalam tag <style> dan kode HTML dituliskan di bagian atas (header) file HTML. Internal CSS dapat digunakan untuk membuat tampilan pada satu halaman website dan tidak digunakan pada halaman website yang lain.
+    Cara ini akan sangat cocok dipakai untuk menciptakan halaman web dengan tampilan yang berbeda. Dengan kata lain, Internal CSS ini bisa dipakai untuk menciptakan tampilan yang unik, pada setiap halaman website.
+
+    External : Eksternal CSS adalah kode CSS yang ditulis terpisah dengan kode HTML Eksternal CSS ditulis di sebuah file khusus yang berekstensi .css. File eksternal CSS biasanya diletakkan setelah bagian <head> pada halaman.
+    Cara ini lebih sederhana dan simpel daripada menambahkan kode CSS di setiap elemen HTML yang ingin Anda atur tampilannya. 
+
+    Inline : Inline CSS adalah kode CSS yang ditulis langsung pada atribut elemen HTML. Setiap elemen HTML memiliki atribut style, di situ lah inline CSS ditulis.
+    Cara ini kurang efisien karena setiap tag HTML yang diberikan harus memiliki style masing-masing. Anda akan lebih sulit dalam mengatur website jika hanya menggunakan inline style CSS. Sebab, Inline CSS digunakan hanya untuk mengubah satu elemen saja.
+
+## Jelaskan tag HTML5 yang kamu ketahui
+	 
+    <!DOCTYPE>	Tag untuk menentukan tipe dokumen
+    <html>	Tag untuk membuat sebuah dokumen HTML
+    <title>	Tag untuk membuat judul dari sebuah halaman
+    <body>	Tag untuk membuat tubuh dari sebuah halaman
+    <h1> to <h6>	Tag untuk membuat heading
+    <p>	Tag untuk membuat paragraf
+    <br>	Memasukan satu baris putus
+    <hr>	Tag untuk membuat perubahan dasar kata didalam isi
+    <!--...-->	Tag untuk membuat komentar
+    <form>	Tag untuk membuat sebuah form HTML untuk input pengguna
+    <input>	Tag untuk membuat sebuah kontrol input
+    <textarea>	Tag untuk membuat sebuah kontrol input multibaris (text area)
+
+    dan masih banyak lagi..
+
+
+## Tipe-Tipe CSS Selector
+    Universal Selector : Memilih semua elemen html. Syntax: *
+
+    Type Selector : Memilih semua elemen node namenya sesuai. Contoh: type selector p akan memilih semua elemen <p>
+
+    Class Selector : Memilih semua elemen yang punya attribut class yang sesuai. Contoh: .card akan memilih semua elemen yang punya class card
+
+    ID Selector : Memilih sebuah elemen berdasarkan nilai attribut idnya. Misalnya: #user akan memilih elemen yang punya id "user".
+
+    Attribut selector : Memilih semua elemen yang punya attribut. Contoh: [href] akan memilih semua elemen yang punya attribut href. 
+
+## Implementasi checklist
+## Menambahkan tag `<link>` pada base.html untuk menggunakan CDN dari tailwind css
+saya menambahkan scrip buat tailwind dan bootstrap buat berjaga-jaga kalo mau nge mix
+![image](./assets/base.png)
+## Implementasi Kustomisasi Login, Register, dan Create-task
+login
+![image](./assets/login.png)
+
+Register 
+![image](./assets/register.png)
+
+Create-task
+![image](./assets/create-task.png)
+
+
+## Implementasi halaman utama todolist
+![image](./assets/todolist1.png)
+![image](./assets/todolist2.png)

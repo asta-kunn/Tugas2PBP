@@ -1,46 +1,46 @@
-{% extends 'base.html' %}
-
-{% block meta %}
+{% extends 'base.html' %} {% block meta %}
 <title>Login</title>
-{% endblock meta %}
+{% endblock meta %} {% block content %}
 
-{% block content %}
-
-<div class = "login" style= "text-align: center">
-
-
-    <h1>Login</h1>
-
-    <form method="POST" action="" >
-        {% csrf_token %}
-        <table style="margin-left: auto; margin-right: auto;">
-            <tr>
-                <td >Username: </td>
-                <td><input type="text" name="username" placeholder="Username" class="form-control"></td>
-            </tr>
-                    
-            <tr>
-                <td>Password: </td>
-                <td><input type="password" name="password" placeholder="Password" class="form-control"></td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td><input class="btn login_btn" type="submit" value="Login"></td>
-            </tr>
-        </table>
-    </form>
-
-    {% if messages %}
-        <ul>
-            {% for message in messages %}
-                <li style= "text-align: center">{{ message }}</li>
-            {% endfor %}
-        </ul>
-    {% endif %}
-        
-    Belum mempunyai akun? <a href="{% url 'todolist:register' %}">Buat Akun</a>
-
+<div class="flex items-center justify-center min-h-screen bg-gray-100">
+  <div class="px-8 py-6 mt-4 text-left bg-white shadow-lg">
+      <h3 class="text-2xl font-bold text-center">Login</h3>
+      <form action="" method="POST">
+          {% csrf_token %}
+          <div class="mt-4">
+              <div>
+                  <label class="block" for="username">Username<label>
+                          <input type="text" name="username" placeholder="Username"
+                              class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600">
+              </div>
+              <div class="mt-4">
+                  <label class="block" for="password">Password<label>
+                  <input type="password" placeholder="Password" name="password"
+                      class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600">
+              </div>
+              {% comment %} add new line for space login and text cnter {% endcomment %}
+              <div class="mt-4">
+                <input
+                data-mdb-ripple="true"
+                data-mdb-ripple-color="light"
+                class="w-full px-4 py-2 text-white rounded md bg-gradient-to-r from-blue-500 to-red-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+                type="submit"
+                value="Login"
+              />
+ 
+          </div>
+      </form>
+      {% if messages %}
+      <ul>
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+      <p> 
+        Belum mempunyai akun?
+        <a href="{% url 'todolist:register' %}" class="font-bold text-blue-600 underline hover:underline rounded-md">Buat Akun</a>
+      </p> 
+  </div>
 </div>
-
 {% endblock content %}

@@ -1,48 +1,67 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} {% block content %} {% load todolist_customtags %}
 
-{% block content %}
+<nav class="font-sans flex flex-col text-center sm:flex-row sm:text-left sm:justify-between py-4 px-6 bg-white shadow sm:items-baseline w-full">
+  <div class="mb-2 sm:mb-0">
+    <h1 class="text-2xl font-bold">Welcome back, <span class="text-blue-500">{{ nama }}</span>!</h1>
+  </div>
+  <div>
+    <button
+    onclick="location.href='{% url 'todolist:logout' %}'"
+    type="button"
+    class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white focus:ring-4 focus:outline-none focus:ring-pink-200"
+  >
+    <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white rounded-md group-hover:bg-opacity-0">Logout</span>
+  </button>
+  </div>
+</nav>
+<div class="space-y-5 md:space-y-10 pt-10 max-w-[80%] mx-auto min-h-screen text-center">
+  <button 
+    onclick="location.href='{% url 'todolist:create-task' %}'"
+    type="button"
+    class="inline-block mx-auto hover:shadow-lg hover:shadow-blue-500/50 px-6 pt-2.5 pb-2 transition duration-150 ease-in-out flex align-center gap-2 items-center text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 rounded-lg px-5 py-2.5"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>    
+    <p>
+      Create Task
+    </p>
+  </button>
 
-{% csrf_token %}
-
-<h5 style= "text-align: center">Nama: </h5>
-<p style= "text-align: center">{{nama}}</p>
-
-<table style="margin-left: auto; margin-right: auto;">
-    <tr>
-    <th>Tittle</th>
-    <th>Tanggal</th>
-    <th>Deskripsi</th>
-    <th>Selesai</th>
-    <th>Cheklist</th>
-    <th>Hapus</th>
-    </tr>
-    {% comment %} Tambahkan data di bawah baris ini {% endcomment %}
-    {% for todolist in todo_list %}
-    <tr>
-        <th>{{todolist.title}}</th>
-        <th>{{todolist.date}}</th>
-        <th>{{todolist.description}}</th>
-        {% if todolist.status == False %}
-        <th>Belum Selesai</th>
-        {% else %}
-        <th>Selesai</th>
-        {% endif %}
-        <th><a href="{% url 'todolist:cheklist' todolist.id %}"><button>Check</button></th>
-        <th><a href="{% url 'todolist:hapus' todolist.pk%}"><button>Delete</button></th>
-        
-    </tr>
-{% endfor %}
-
-   
-</table>
-    
-
-<h5  style= "text-align: center">Sesi terakhir login: {{ last_login }}</h5>
-<button style= "display: block; margin-left: auto; margin-right: auto;"><a href="{% url 'todolist:create-task' %}">Tambah Task Baru</a></button>
-<button style= "display: block; margin-left: auto; margin-right: auto;"><a href="{% url 'todolist:logout' %}">Logout</a></button>
-
-
-
-
+  <div class="flex flex-wrap gap-20 justify-center pb-20">
+  {% for task in todo_list %}
+    <div class="flex justify-center {% if task.status %} opacity-50 {% endif %} hover:scale-105 transition-all">
+      <div class="block rounded-lg shadow-lg hover:shadow-blue-500/30 bg-white max-w-sm text-center w-80">
+        <div class="py-3 px-6 border-b bg-gray-800 {% if task.status %} bg-gradient-to-r from-green-400 to-green-600 {% else %} from-purple-600 to-blue-500 {% endif %} flex gap-4 text-white justify-center form-check items-center rounded-t-lg hover:bg-gradient-to-bl transition-all">
+          <label for="status inline-block">Done</label>
+          <input
+            type="checkbox"
+            name="status"
+            id="status"
+            {% if task.status %} checked {% endif %}
+            onchange="location.href='{% url 'todolist:cheklist' task.id %}'"
+            class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 focus:ring-2"
+          />
+        </div>
+        <div class="p-6">
+          <h5 class="text-gray-900 text-xl font-bold mb-2">{{task.title}}</h5>
+          <p class="text-gray-700 text-sm mb-4">{{task.description}}</p>
+          <button
+            onclick="location.href='{% url 'todolist:hapus' task.id %}'"
+            type="button"
+            class="text-white bg-gradient-to-br from-blue-500 to-red-400 shadow-lg shadow-red-500/30 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+          >
+            Delete
+          </button>
+        </div>
+        <div class="py-3 px-6 border-t border-gray-300 text-gray-600">
+          <p class="text-xs">Created At: </p>
+          <p>{{task.date}}</p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
 
 {% endblock content %}

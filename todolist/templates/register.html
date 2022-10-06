@@ -1,27 +1,30 @@
-{% extends 'base.html' %}
-
-{% block meta %}
+{% extends 'base.html' %} {% block meta %}
 <title>Registrasi Akun</title>
-{% endblock meta %}
+{% endblock meta %} {% block content %}
 
-{% block content %}  
-
-<div class = "login" style="margin-left: auto; margin-right: auto;"> 
-    
-    <h1>Formulir Registrasi</h1>  
-
-        <form method="POST" >  
-            {% csrf_token %}  
-            <table>  
-                {{ form.as_table }}  
-                <tr>  
-                    <td></td>
-                    <td><input type="submit" name="submit" value="Daftar"/></td>  
-                </tr>  
-            </table>  
-        </form>
-
-    {% if messages %}  
+<div class="flex items-center justify-center min-h-screen bg-gray-100">
+  <div class="px-12 py-10 mt-4 text-left bg-blue-lg">
+      <h3 class="text-2xl font-bold text-center">Registration Form</h3>
+      <form action="" method="POST">
+          {% csrf_token %}
+          <table class="border-separate border-spacing-2 border border-slate-500">  
+            {{ form.as_table }}  
+            <tr>  
+                <td></td>
+                <td><input class="bg-gradient-to-r from-blue-500 to-red-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2" type="submit" name="submit" value="Daftar"/></td>  
+            </tr>  
+            <td>
+              Sudah mempunyai akun?
+              <a
+                href="{% url 'todolist:login' %}"
+                class="font-bold text-blue-600 underline hover:bg-gradient-to-bl"
+                >Login</a
+              >
+            </td>
+        </table>  
+      </form>
+      
+      {% if messages %}  
         <ul>   
             {% for message in messages %}  
                 <li>{{ message }}</li>  
