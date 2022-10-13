@@ -1,50 +1,83 @@
+from this import d
 from django.shortcuts import render
 from django.shortcuts import redirect
 from django.contrib.auth.forms import UserCreationForm
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse, JsonResponse
 from django.urls import reverse
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
+from django.core import serializers
 from todolist.models import BarangTodolist
 import datetime
 
 # Create your views here.
 @login_required(login_url='/todolist/login/')
 def show_todolist(request):
-    username = request.user.username
-    todolist_data = BarangTodolist.objects.filter(user=request.user)
     context = { 
-        "nama": username,
-        "todo_list": todolist_data,
-        'last_login': request.COOKIES['last_login'],
+        "nama": request.user,
     }
     return render(request, "todolist.html", context)
 
+# create function to show json
+@login_required(login_url='/todolist/login/')
+def show_json(request):
+    todolist_data = BarangTodolist.objects.filter(user=request.user)
+    
+    return HttpResponse(serializers.serialize("json", todolist_data), content_type='application/json')
+
+@login_required(login_url='/todolist/login/')
 def tambah_input(request):
     context = {}
     if request.method == "POST":
         title = request.POST.get("title")
         description = request.POST.get("description")
         user = request.user
-        data = BarangTodolist(user=user, title=title, description=description)    
+        data = BarangTodolist(user=user, title=title, description=description,  date=datetime.datetime.today())    
         data.save()
         return redirect("todolist:show_todolist")
     return render(request, "create-task.html", context)
-    
+
+@login_required(login_url='/todolist/login/')
 def hapus_input(request, pk):
-    data = BarangTodolist.objects.filter(pk=pk)
-    data.delete()
-    return redirect("todolist:show_todolist")
+    # data = BarangTodolist.objects.filter(pk=pk)
+    # data.delete()
+    # return redirect("todolist:show_todolist")
+    if request.method == "DELETE":
+        data = BarangTodolist.objects.get(user=request.user,pk=pk)
+        data.delete()
+        return JsonResponse(
+            {
+                "pk": data.pk,
+                "fields": {
+                "title": data.title,
+                "description": data.description,
+                "status": data.status,
+                "date": data.date,
+                },
+
+            },
+            status=200,
+        )
 
 def cheklist_todolist(request, pk):
-    data = BarangTodolist.objects.get(id=pk)
-    if(data.status == False):
-        data.status = True
-    else:
-        data.status = False
-    data.save()
-    return redirect("todolist:show_todolist")
+    if request.method == "PUT":
+        data = BarangTodolist.objects.get(user=request.user,pk=pk)
+        data.status = not data.status
+        data.save()
+        return JsonResponse(
+            {
+                "pk": data.pk,
+                "fields": {
+                "title": data.title,
+                "description": data.description,
+                "status": data.status,
+                "date": data.date,
+                },
+
+            },
+            status=200,
+        )
 
 def registrasi(request):
     form = UserCreationForm()
@@ -77,3 +110,22 @@ def logout_user(request):
     response = HttpResponseRedirect(reverse('todolist:login'))
     response.delete_cookie('last_login')
     return response
+
+@login_required(login_url='/todolist/login/')
+def add_task_ajax(request):
+    if request.method ==  "POST":
+        title = request.POST.get("title")
+        description = request.POST.get("description")
+        user = request.user
+        data = BarangTodolist.objects.create(user=user, title=title, description=description, date=datetime.datetime.today())    
+        return JsonResponse({
+            "pk": data.pk,
+            "fields": {
+                "title": data.title,
+                "description": data.description,
+                "status": data.status,
+                "date": data.date,
+            },
+        },
+        status=200,
+        )
