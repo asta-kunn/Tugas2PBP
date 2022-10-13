@@ -64,7 +64,7 @@
 
           // add event listener to the checkbox
           $(`#status-${value.pk}`).change(() => {
-            updateFinished(value.pk);
+            Cheklist(value.pk);
           });
         });
       });
@@ -91,7 +91,7 @@
       });
     };
 
-    const updateFinished = id => {
+    const Cheklist = id => {
       // get the CSRF Token
       const csrftoken = document.querySelector(
         "[name=csrfmiddlewaretoken]"
