@@ -4,21 +4,21 @@
       "pk": 1,
       "fields": {
         "watched": true,
-        "title": "Thor Ragnarok",
+        "title": "Black Panther 2",
         "rating": 5,
-        "release_date": "2017-10-25",
-        "review": "Exciting, funny, and above all fun, Thor: Ragnarok is a colorful cosmic adventure that sets a new standard for its franchise -- and the rest of the Marvel Cinematic Universe."
+        "release_date": "2022-05-06",
+        "review": "This Wakanda Forever is outstanding. It handles loss, grief and revenge with a maturity and seriousness rarely seen in the MCU. Black Panther continues to be their crown jewel. Letitia Wright, Angela Bassett and Tenoch Huerta all bring some of the best acting I've seen all year."
       }
     },
     {
       "model": "mywatchlist.mywatchlistitem",
       "pk": 2,
       "fields": {
-        "watched": true,
-        "title": "Avengers Infinity War",
-        "rating": 4,
-        "release_date": "2018-04-25",
-        "review": "Avengers: Infinity War ably juggles a dizzying array of MCU heroes in the fight against their gravest threat yet, and the result is a thrilling, emotionally resonant blockbuster that (mostly) realizes its gargantuan ambitions."
+        "watched": false,
+        "title": "Ashiap Man",
+        "rating": 2,
+        "release_date": "2022-12-17",
+        "review": "This is a terrible movie. It's a mess of a story, the acting is terrible and the CGI is laughable. I can't believe they made a sequel to this."
       }
     },
     {
@@ -37,10 +37,10 @@
       "pk": 4,
       "fields": {
         "watched": false,
-        "title": "Black Panther",
+        "title": "Doraemon the Movie: Nobita's Treasure Island",
         "rating": 4,
-        "release_date": "2018-02-16",
-        "review": "Black Panther elevates superhero cinema to thrilling new heights while telling one of the MCU's most absorbing stories -- and introducing some of its most fully realized characters."
+        "release_date": "2021-08-13",
+        "review": "Doraemon the Movie: Nobita's Treasure Island is a fun adventure that will keep you entertained for the entire runtime. It's a great movie for the whole family."
       }
     },
     {
@@ -48,10 +48,10 @@
       "pk": 5,
       "fields": {
         "watched": true,
-        "title": "Click",
+        "title": "Pengabdi Setan 2",
         "rating": 3,
-        "release_date": "2006-06-23",
-        "review": "It was too sad to be funny."
+        "release_date": "2023-08-4",
+        "review": "Pengabdi Setan 2 is a Scary movie that will keep you entertained for the entire runtime. It's a great movie for the whole family."
       }
     },
     {
@@ -59,10 +59,10 @@
       "pk": 6,
       "fields": {
         "watched": true,
-        "title": "The Boys",
+        "title": "Dear Nathan",
         "rating": 5,
-        "release_date": "2019-07-26",
-        "review": "Managing to up the ante on what was already one of television's most audacious satires, The Boys' third season is both bracingly visceral and wickedly smart."
+        "release_date": "2021-08-13",
+        "review": "Dear Nathan is a fun adventure that will keep you entertained for the entire runtime. It's a great movie for the whole family."
       }
     },
     {
