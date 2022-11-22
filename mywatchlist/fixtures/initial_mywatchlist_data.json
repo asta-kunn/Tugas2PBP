@@ -1,112 +1,112 @@
 [
     {
-        "model": "mywatchlist.mywatchlistitem",
-        "pk": 1,
-        "fields": {
-            "watched": true,
-            "title": "The Walking Dead",
-            "rating": 4,
-            "release_date": "2010-10-31",
-            "review": "Film ini sangat bagus" 
-       }
+      "model": "mywatchlist.mywatchlistitem",
+      "pk": 1,
+      "fields": {
+        "watched": true,
+        "title": "Thor Ragnarok",
+        "rating": 5,
+        "release_date": "2017-10-25",
+        "review": "Exciting, funny, and above all fun, Thor: Ragnarok is a colorful cosmic adventure that sets a new standard for its franchise -- and the rest of the Marvel Cinematic Universe."
+      }
     },
     {
-        "model": "mywatchlist.mywatchlistitem",
-        "pk": 2,
-        "fields": {
-            "watched": true,
-            "title": "Teman Tapi Menikah",
-            "rating": 5,
-            "release_date": "2018-07-19",
-            "review": "Romance nya dapet, ceritanya juga bagus" 
-       }
+      "model": "mywatchlist.mywatchlistitem",
+      "pk": 2,
+      "fields": {
+        "watched": true,
+        "title": "Avengers Infinity War",
+        "rating": 4,
+        "release_date": "2018-04-25",
+        "review": "Avengers: Infinity War ably juggles a dizzying array of MCU heroes in the fight against their gravest threat yet, and the result is a thrilling, emotionally resonant blockbuster that (mostly) realizes its gargantuan ambitions."
+      }
     },
     {
-        "model": "mywatchlist.mywatchlistitem",
-        "pk": 3,
-        "fields": {
-            "watched": false,
-            "title": "Spirited Away",
-            "rating": 4,
-            "release_date": "2001-07-20",
-            "review": "wibu tapi ga wibbu banget" 
-       }
+      "model": "mywatchlist.mywatchlistitem",
+      "pk": 3,
+      "fields": {
+        "watched": true,
+        "title": "Avengers Endgame",
+        "rating": 5,
+        "release_date": "2019-04-25",
+        "review": "Exciting, entertaining, and emotionally impactful, Avengers: Endgame does whatever it takes to deliver a satisfying finale to Marvel's epic Infinity Saga."
+      }
     },
     {
-        "model": "mywatchlist.mywatchlistitem",
-        "pk": 4,
-        "fields": {
-            "watched": false,
-            "title": "The Godfather",
-            "rating": 3,
-            "release_date": "1972-03-24",
-            "review": "Film ini sangat bagus"
-       }
+      "model": "mywatchlist.mywatchlistitem",
+      "pk": 4,
+      "fields": {
+        "watched": false,
+        "title": "Black Panther",
+        "rating": 4,
+        "release_date": "2018-02-16",
+        "review": "Black Panther elevates superhero cinema to thrilling new heights while telling one of the MCU's most absorbing stories -- and introducing some of its most fully realized characters."
+      }
     },
     {
-        "model": "mywatchlist.mywatchlistitem",
-        "pk": 5,
-        "fields": {
-            "watched": false,
-            "title": "The Shawshank Redemption",
-            "rating": 4,
-            "release_date": "1994-09-23",
-            "review": "Film ini sangat bagus"
-       }
+      "model": "mywatchlist.mywatchlistitem",
+      "pk": 5,
+      "fields": {
+        "watched": true,
+        "title": "Click",
+        "rating": 3,
+        "release_date": "2006-06-23",
+        "review": "It was too sad to be funny."
+      }
     },
     {
-        "model": "mywatchlist.mywatchlistitem",
-        "pk": 6,
-        "fields": {
-            "watched": false,
-            "title": "The Dark Knight",
-            "rating": 4,
-            "release_date": "2008-07-18",
-            "review": "Film ini sangat bagus" 
-       }
+      "model": "mywatchlist.mywatchlistitem",
+      "pk": 6,
+      "fields": {
+        "watched": true,
+        "title": "The Boys",
+        "rating": 5,
+        "release_date": "2019-07-26",
+        "review": "Managing to up the ante on what was already one of television's most audacious satires, The Boys' third season is both bracingly visceral and wickedly smart."
+      }
     },
     {
-        "model": "mywatchlist.mywatchlistitem",
-        "pk": 7,
-        "fields": {
-            "watched": false,
-            "title": "Titanic",
-            "rating": 5,
-            "release_date": "1997-11-18",
-            "review": "Romance nya dapet, ceritanya juga bagus" 
-       }
+      "model": "mywatchlist.mywatchlistitem",
+      "pk": 7,
+      "fields": {
+        "watched": false,
+        "title": "Top Gun: Maverick",
+        "rating": 5,
+        "release_date": "2022-05-27",
+        "review": "Top Gun: Maverick pulls off a feat even trickier than a 4G inverted dive, delivering a long-belated sequel that surpasses its predecessor in wildly entertaining style."
+      }
     },
     {
-        "model": "mywatchlist.mywatchlistitem",
-        "pk": 8,
-        "fields": {
-            "watched": false,
-            "title": "Tampar",
-            "rating": 4,
-            "release_date": "2001-07-20",
-            "review": "nyesek bangett, bagus sangat di rekomendasikan" 
-       }
+      "model": "mywatchlist.mywatchlistitem",
+      "pk": 8,
+      "fields": {
+        "watched": true,
+        "title": "Doctor Strange in the Multiverse of Madness",
+        "rating": 4,
+        "release_date": "2022-05-05",
+        "review": "Doctor Strange in the Multiverse of Madness delivers all the action and visual excitement you want in a Marvel movie while taking the franchise in a much darker direction."
+      }
     },
     {
-        "model": "mywatchlist.mywatchlistitem",
-        "pk": 9,
-        "fields": {
-            "watched": false,
-            "title": "Spongebob Squarepants",
-            "rating": 3,
-            "release_date": "1972-03-24",
-            "review": "Film ini sangat bagus"
-       }
+      "model": "mywatchlist.mywatchlistitem",
+      "pk": 9,
+      "fields": {
+        "watched": false,
+        "title": "Morbius",
+        "rating": 2,
+        "release_date": "2022-03-30",
+        "review": "Cursed with uninspired effects, rote performances, and a borderline nonsensical story, this dreary mess is a vein attempt to make Morbius happen."
+      }
     },
     {
-        "model": "mywatchlist.mywatchlistitem",
-        "pk": 10,
-        "fields": {
-            "watched": false,
-            "title": "Tendangan si Madun the Movie",
-            "rating": 4,
-            "release_date": "1994-09-23",
-            "review": "Film ini sangat bagus dan nostalgic banget"
-       }
+      "model": "mywatchlist.mywatchlistitem",
+      "pk": 10,
+      "fields": {
+        "watched": false,
+        "title": "The Batman",
+        "rating": 4,
+        "release_date": "2022-03-02",
+        "review": "It's long, but The Batman looks and sounds great, and its grounded take on Gotham is a solid fit for this Caped Crusader."
+      }
     }
-]
+  ]
