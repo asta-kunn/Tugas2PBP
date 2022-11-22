@@ -3,7 +3,7 @@
         "model": "mywatchlist.mywatchlistitem",
         "pk": 1,
         "fields": {
-            "watched": "Sudah",
+            "watched": true,
             "title": "The Walking Dead",
             "rating": 4,
             "release_date": "2010-10-31",
@@ -14,7 +14,7 @@
         "model": "mywatchlist.mywatchlistitem",
         "pk": 2,
         "fields": {
-            "watched": "Sudah",
+            "watched": true,
             "title": "Teman Tapi Menikah",
             "rating": 5,
             "release_date": "2018-07-19",
@@ -25,7 +25,7 @@
         "model": "mywatchlist.mywatchlistitem",
         "pk": 3,
         "fields": {
-            "watched": "Sudah",
+            "watched": false,
             "title": "Spirited Away",
             "rating": 4,
             "release_date": "2001-07-20",
@@ -36,7 +36,7 @@
         "model": "mywatchlist.mywatchlistitem",
         "pk": 4,
         "fields": {
-            "watched": "Belum",
+            "watched": false,
             "title": "The Godfather",
             "rating": 3,
             "release_date": "1972-03-24",
@@ -47,7 +47,7 @@
         "model": "mywatchlist.mywatchlistitem",
         "pk": 5,
         "fields": {
-            "watched": "Belum",
+            "watched": false,
             "title": "The Shawshank Redemption",
             "rating": 4,
             "release_date": "1994-09-23",
@@ -58,7 +58,7 @@
         "model": "mywatchlist.mywatchlistitem",
         "pk": 6,
         "fields": {
-            "watched": "Sudah",
+            "watched": false,
             "title": "The Dark Knight",
             "rating": 4,
             "release_date": "2008-07-18",
@@ -69,7 +69,7 @@
         "model": "mywatchlist.mywatchlistitem",
         "pk": 7,
         "fields": {
-            "watched": "Belum",
+            "watched": false,
             "title": "Titanic",
             "rating": 5,
             "release_date": "1997-11-18",
@@ -80,7 +80,7 @@
         "model": "mywatchlist.mywatchlistitem",
         "pk": 8,
         "fields": {
-            "watched": "Sudah",
+            "watched": false,
             "title": "Tampar",
             "rating": 4,
             "release_date": "2001-07-20",
@@ -91,7 +91,7 @@
         "model": "mywatchlist.mywatchlistitem",
         "pk": 9,
         "fields": {
-            "watched": "Belum",
+            "watched": false,
             "title": "Spongebob Squarepants",
             "rating": 3,
             "release_date": "1972-03-24",
@@ -102,7 +102,7 @@
         "model": "mywatchlist.mywatchlistitem",
         "pk": 10,
         "fields": {
-            "watched": "Belum",
+            "watched": false,
             "title": "Tendangan si Madun the Movie",
             "rating": 4,
             "release_date": "1994-09-23",
